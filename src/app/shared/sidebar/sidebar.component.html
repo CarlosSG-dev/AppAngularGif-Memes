@@ -1,9 +1,12 @@
  <!--Nav Lateral-->
  <div class="bg-dark border-right p-3" id="sidebar">
-    <h3 class="text-light">App</h3>
+    <h3 class="text-light">Buscador de gifs</h3>
     <hr class="text-white">
+    <h6 class="text-light">Historial:</h6>
     <div class="list-group list-reset">
-      <a *ngFor="let resultado of historial" href="#" class="list-group-item list-group-item-action">
+      <a *ngFor="let resultado of historial" 
+        (click)="buscar(resultado)"
+      href="#" class="list-group-item list-group-item-action">
         {{resultado | titlecase}}
       </a>
     </div>
